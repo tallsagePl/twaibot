@@ -1,0 +1,9 @@
+{
+  "id": "profile-003",
+  "age": 22,
+  "distanceKm": 45,
+  "bio": "",
+  "interests": ["тусовки", "фото", "авто"],
+  "goal": "не определился",
+  "compatibilityPercent": 40
+}

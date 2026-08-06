@@ -1,0 +1,45 @@
+node_modules/
+dist/
+out/
+release/
+*.log
+.DS_Store
+Thumbs.db
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+
+# Local runtime data (SQLite, captures, cloud previews, backups)
+data/application.sqlite
+data/application.sqlite-*
+data/backups/**
+data/cloud-previews/**
+data/temporary/**
+!data/temporary/.gitkeep
+data/logs/**
+!data/logs/.gitkeep
+data/history/**
+!data/history/.gitkeep
+data/discovery/**
+!data/discovery/.gitkeep
+data/references/**
+!data/references/.gitkeep
+
+# Any user media under data/ (belt and suspenders)
+data/**/*.jpg
+data/**/*.jpeg
+data/**/*.png
+data/**/*.webp
+data/**/*.gif
+data/**/*.xml
+
+*.local
+coverage/
+.vite/
+.turbo/
+*.tsbuildinfo
+
+# IDE (machine-specific)
+.idea/

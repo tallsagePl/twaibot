@@ -1,0 +1,41 @@
+{
+  "name": "twinby-ai-swiper",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Orpheus & Eurydice — local Windows desktop AI for Twinby swipe + own-profile optimization via Appium",
+  "packageManager": "pnpm@11.17.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @twinby/desktop dev",
+    "build": "pnpm run build:packages && pnpm --filter @twinby/desktop build",
+    "build:packages": "pnpm -r --filter=./packages/* build",
+    "test": "pnpm -r --filter=./packages/* test && pnpm --filter @twinby/desktop test",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "doctor": "tsx scripts/doctor.ts",
+    "foundation:doctor": "tsx scripts/doctor.ts",
+    "android:list-avds": "tsx scripts/list-avds.ts",
+    "android:list-devices": "tsx scripts/list-devices.ts",
+    "android:start": "echo \"Запуск AVD — этап 6\"",
+    "appium:doctor": "tsx scripts/appium-doctor.ts",
+    "appium:start": "tsx scripts/appium-start.ts",
+    "appium:start:keep": "tsx scripts/appium-start.ts --keep-alive",
+    "twinby:detect-package": "tsx scripts/detect-twinby-package.ts",
+    "twinby:discover": "tsx scripts/discover-twinby-snapshot.ts",
+    "twinby:preflight-smoke": "tsx scripts/twinby-preflight-smoke.ts",
+    "ai:test-text": "echo \"Запустите приложение → ИИ → Проверить текст\"",
+    "ai:test-vision": "echo \"Запустите приложение → ИИ → Проверить vision\"",
+    "mock:session": "tsx scripts/mock-session.ts"
+  },
+  "devDependencies": {
+    "@twinby/android-environment": "workspace:*",
+    "@twinby/appium-client": "workspace:*",
+    "@twinby/config": "workspace:*",
+    "@types/node": "^22.15.30",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}

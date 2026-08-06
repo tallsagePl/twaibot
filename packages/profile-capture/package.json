@@ -1,0 +1,31 @@
+{
+  "name": "@twinby/profile-capture",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "lint": "echo \"lint: skipped\""
+  },
+  "dependencies": {
+    "@twinby/appium-client": "workspace:*",
+    "@twinby/contracts": "workspace:*",
+    "@twinby/image-pipeline": "workspace:*",
+    "@twinby/twinby-adapter": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <!--
+      Dev CSP must allow Vite HMR (127.0.0.1 + inline preamble).
+      Tight CSP can be reintroduced for packaged builds.
+    -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' http://127.0.0.1:* http://localhost:* ws://127.0.0.1:* ws://localhost:* data: blob:; script-src 'self' 'unsafe-inline' 'unsafe-eval' http://127.0.0.1:* http://localhost:*; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' http://127.0.0.1:* http://localhost:* ws://127.0.0.1:* ws://localhost:*"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eurydice</title>
+  </head>
+  <body>
+    <div id="root">
+      <noscript>Нужен JavaScript</noscript>
+      <p style="font-family: system-ui; padding: 24px; color: #333">
+        Загрузка Eurydice…
+      </p>
+    </div>
+    <script type="module" src="./main.tsx"></script>
+  </body>
+</html>

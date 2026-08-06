@@ -1,0 +1,200 @@
+{
+  "id": "com.twinby-2.3.0-720x1280",
+  "appPackage": "com.twinby",
+  "appVersion": "2.3.0",
+  "screenWidth": 720,
+  "screenHeight": 1280,
+  "discoveredAt": "2026-07-30T12:00:24.785Z",
+  "notes": [
+    "Снято с FiiO M11S (UDID 3fa90f5), Twinby 2.3.0, feed с открытой анкетой.",
+    "resource-id без package prefix (Flutter semantics).",
+    "Отдельного resource-id для next photo / photo dots нет — nextPhotoArea = relative-tap по правой части ProfileCard (визуально 4 сегмента).",
+    "Полный bio на face card может отсутствовать — requireBio: скролл/детали на этапе 9.",
+    "Like/dislike/superlike/rewind НЕ вызывать на этапе 8.",
+    "Bottom nav (LTR, 2026-08-07 BlueStacks screenshots): 1 Chat+matches, 2 Likes, 3 Feed, 4 Games(ignore), 5 Profile.",
+    "Chats: лента чатов; «Новые пары» сверху + ссылка «Все» справа → список всех мэтчей.",
+    "Likes: заголовок «Лайки», сетка входящих лайков (read-only для бота).",
+    "Own profile: tab5 → accessibility-id profilePage-ProfileWidget-Avatar → edit; «Просмотр»; preview exit — swipe down.",
+    "Esc/Back: из анкеты 1×; из чата или edit 2× → нижняя навигация. Для 1080×1920 см. com.twinby-2.3.0-1080x1920.json."
+  ],
+  "feed": {
+    "root": [
+      {
+        "strategy": "resource-id",
+        "value": "profileFeed-ProfileCard",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "likeButton": [
+      {
+        "strategy": "resource-id",
+        "value": "profileFeed-Button-Like",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "dislikeButton": [
+      {
+        "strategy": "resource-id",
+        "value": "profileFeed-Button-Dislike",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "superlikeButton": [
+      {
+        "strategy": "resource-id",
+        "value": "profileFeed-Button-Superlike",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "rewindButton": [
+      {
+        "strategy": "resource-id",
+        "value": "profileFeed-Button-Rewind",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "compatibilityButton": [
+      {
+        "strategy": "resource-id",
+        "value": "profileFeed-Button-Compatibility",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "detailsButton": [
+      {
+        "strategy": "relative-tap",
+        "of": "profileFeed-ProfileCard",
+        "xRatio": 0.5,
+        "yRatio": 0.88,
+        "note": "Нижняя зона карточки (имя/теги). ProfileCard clickable=true. После тапа — back() без like. Подтвердить на устройстве.",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "name": [
+      {
+        "strategy": "accessibility-id",
+        "value": "Настасья, 23",
+        "note": "Пример content-desc; парсить как «Имя, возраст». Не хардкодить имя.",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "age": [],
+    "distance": [],
+    "compatibility": [
+      {
+        "strategy": "resource-id",
+        "value": "profileFeed-Button-Compatibility",
+        "note": "content-desc содержит процент, напр. «89%»",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "bio": [],
+    "interests": [],
+    "nextPhotoArea": [
+      {
+        "strategy": "relative-tap",
+        "of": "profileFeed-ProfileCard",
+        "xRatio": 0.78,
+        "yRatio": 0.32,
+        "note": "Правая зона фото на карточке; подтверждено визуально сегментами сверху. Нет resource-id.",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "photoIndicator": [
+      {
+        "strategy": "relative-tap",
+        "of": "profileFeed-ProfileCard",
+        "xRatio": 0.5,
+        "yRatio": 0.04,
+        "note": "Сегменты фото вверху карточки — visual only, без id. Считать смену фото по hash screenshot.",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ]
+  },
+  "overlays": {
+    "matchDialog": [],
+    "premiumDialog": [],
+    "updateDialog": [],
+    "errorDialog": [],
+    "noProfiles": []
+  },
+  "navigation": {
+    "chat": [
+      {
+        "strategy": "accessibility-id",
+        "value": "navigationBar-Chat",
+        "note": "Tab 1 LTR — чаты и мэтчи",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "likes": [
+      {
+        "strategy": "accessibility-id",
+        "value": "navigationBar-Likes",
+        "note": "Tab 2 LTR — входящие лайки",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "feed": [
+      {
+        "strategy": "accessibility-id",
+        "value": "navigationBar-Feed",
+        "note": "Tab 3 LTR — лента анкет",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "games": [
+      {
+        "strategy": "accessibility-id",
+        "value": "navigationBar-Games",
+        "note": "Tab 4 LTR — не используем в продукте",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "profile": [
+      {
+        "strategy": "accessibility-id",
+        "value": "navigationBar-Profile",
+        "note": "Tab 5 LTR — профиль и настройки",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "allMatchesLink": [
+      {
+        "strategy": "accessibility-id",
+        "value": "Все",
+        "note": "Подтверждено dump 1080×1920; fallback для 720.",
+        "discoveredAt": "2026-08-07T11:48:02.978Z"
+      }
+    ],
+    "matchesListRoot": [
+      {
+        "strategy": "accessibility-id",
+        "value": "Новые пары",
+        "discoveredAt": "2026-08-07T11:49:08.509Z"
+      }
+    ],
+    "ownProfileAvatar": [
+      {
+        "strategy": "accessibility-id",
+        "value": "profilePage-ProfileWidget-Avatar",
+        "note": "Dump 1080×1920 hub; на 720 подтвердить bounds при первом запуске.",
+        "discoveredAt": "2026-08-07T11:52:10.474Z"
+      }
+    ],
+    "ownProfileEditRoot": [
+      {
+        "strategy": "accessibility-id",
+        "value": "Мои фото",
+        "discoveredAt": "2026-08-07T11:52:27.284Z"
+      }
+    ],
+    "ownProfilePreviewButton": [
+      {
+        "strategy": "accessibility-id",
+        "value": "Просмотр",
+        "discoveredAt": "2026-08-07T11:52:27.284Z"
+      }
+    ]
+  }
+}

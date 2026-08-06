@@ -1,0 +1,237 @@
+{
+  "id": "com.twinby-2.3.0-1080x1920",
+  "appPackage": "com.twinby",
+  "appVersion": "2.3.0",
+  "screenWidth": 1080,
+  "screenHeight": 1920,
+  "discoveredAt": "2026-08-07T11:52:45.840Z",
+  "notes": [
+    "BlueStacks emulator-5554, dumps 2026-08-07T11-48…11-52 (data/discovery).",
+    "Flutter UI: рабочие маркеры — content-desc / accessibility-id; resource-id на этих экранах почти нет (кроме android:id/content).",
+    "Bottom nav LTR: Chat · Likes · Feed · Games(ignore) · Profile.",
+    "Выход из анкеты: 1× Back/Esc. Из чата или редактирования профиля: 2× Back → нижняя навигация.",
+    "Выход из «Просмотр»: swipe сверху вниз, затем reverse (Back) до nav.",
+    "Не писать сообщения, не авто-лайкать, не менять свою анкету."
+  ],
+  "feed": {
+    "root": [
+      {
+        "strategy": "resource-id",
+        "value": "profileFeed-ProfileCard",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "likeButton": [
+      {
+        "strategy": "resource-id",
+        "value": "profileFeed-Button-Like",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "dislikeButton": [
+      {
+        "strategy": "resource-id",
+        "value": "profileFeed-Button-Dislike",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "superlikeButton": [
+      {
+        "strategy": "resource-id",
+        "value": "profileFeed-Button-Superlike",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "rewindButton": [
+      {
+        "strategy": "resource-id",
+        "value": "profileFeed-Button-Rewind",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "compatibilityButton": [
+      {
+        "strategy": "resource-id",
+        "value": "profileFeed-Button-Compatibility",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "detailsButton": [
+      {
+        "strategy": "relative-tap",
+        "of": "profileFeed-ProfileCard",
+        "xRatio": 0.5,
+        "yRatio": 0.88,
+        "note": "Нижняя зона карточки; после тапа — Back без like.",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "name": [],
+    "age": [],
+    "distance": [],
+    "compatibility": [
+      {
+        "strategy": "resource-id",
+        "value": "profileFeed-Button-Compatibility",
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "bio": [],
+    "interests": [],
+    "nextPhotoArea": [
+      {
+        "strategy": "relative-tap",
+        "of": "profileFeed-ProfileCard",
+        "xRatio": 0.78,
+        "yRatio": 0.32,
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ],
+    "photoIndicator": [
+      {
+        "strategy": "relative-tap",
+        "of": "profileFeed-ProfileCard",
+        "xRatio": 0.5,
+        "yRatio": 0.04,
+        "discoveredAt": "2026-07-30T12:00:24.785Z"
+      }
+    ]
+  },
+  "overlays": {
+    "matchDialog": [],
+    "premiumDialog": [],
+    "updateDialog": [],
+    "errorDialog": [],
+    "noProfiles": []
+  },
+  "navigation": {
+    "chat": [
+      {
+        "strategy": "accessibility-id",
+        "value": "navigationBar-Chat",
+        "note": "Tab 1 — чаты и мэтчи; dump 11-48",
+        "discoveredAt": "2026-08-07T11:48:02.978Z"
+      },
+      {
+        "strategy": "relative-tap",
+        "of": "__window__",
+        "xRatio": 0.1,
+        "yRatio": 0.978,
+        "note": "Fallback: центр вкладки Чат bounds [0,1853][216,1903] @1080x1920",
+        "discoveredAt": "2026-08-07T11:48:02.978Z"
+      }
+    ],
+    "likes": [
+      {
+        "strategy": "accessibility-id",
+        "value": "navigationBar-Likes",
+        "note": "Tab 2 — входящие лайки; dump 11-51",
+        "discoveredAt": "2026-08-07T11:51:01.048Z"
+      },
+      {
+        "strategy": "relative-tap",
+        "of": "__window__",
+        "xRatio": 0.3,
+        "yRatio": 0.978,
+        "note": "Fallback: Лайки [216,1853][432,1903]",
+        "discoveredAt": "2026-08-07T11:51:01.048Z"
+      }
+    ],
+    "feed": [
+      {
+        "strategy": "accessibility-id",
+        "value": "navigationBar-Feed",
+        "note": "Tab 3 — лента",
+        "discoveredAt": "2026-08-07T11:48:02.978Z"
+      },
+      {
+        "strategy": "relative-tap",
+        "of": "__window__",
+        "xRatio": 0.5,
+        "yRatio": 0.978,
+        "note": "Fallback: Анкеты [432,1853][648,1903]",
+        "discoveredAt": "2026-08-07T11:48:02.978Z"
+      }
+    ],
+    "games": [
+      {
+        "strategy": "accessibility-id",
+        "value": "navigationBar-Games",
+        "note": "Tab 4 — не используем",
+        "discoveredAt": "2026-08-07T11:48:02.978Z"
+      }
+    ],
+    "profile": [
+      {
+        "strategy": "accessibility-id",
+        "value": "navigationBar-Profile",
+        "note": "Tab 5 — хаб профиля; dump 11-52",
+        "discoveredAt": "2026-08-07T11:52:10.474Z"
+      },
+      {
+        "strategy": "relative-tap",
+        "of": "__window__",
+        "xRatio": 0.9,
+        "yRatio": 0.978,
+        "note": "Fallback: Профиль [864,1853][1080,1903]",
+        "discoveredAt": "2026-08-07T11:52:10.474Z"
+      }
+    ],
+    "allMatchesLink": [
+      {
+        "strategy": "accessibility-id",
+        "value": "Все",
+        "note": "Справа у «Новые пары» на вкладке чатов; clickable; dump 11-48 bounds [976,71][1062,107]",
+        "discoveredAt": "2026-08-07T11:48:02.978Z"
+      },
+      {
+        "strategy": "relative-tap",
+        "of": "__window__",
+        "xRatio": 0.945,
+        "yRatio": 0.046,
+        "note": "Fallback «Все» [976,71][1062,107]",
+        "discoveredAt": "2026-08-07T11:48:02.978Z"
+      }
+    ],
+    "matchesListRoot": [
+      {
+        "strategy": "accessibility-id",
+        "value": "Новые пары",
+        "note": "Заголовок списка мэтчей после «Все»; dump 11-49",
+        "discoveredAt": "2026-08-07T11:49:08.509Z"
+      }
+    ],
+    "ownProfileAvatar": [
+      {
+        "strategy": "accessibility-id",
+        "value": "profilePage-ProfileWidget-Avatar",
+        "note": "Хаб профиля; dump 11-52 bounds [45,186][165,306]. Рядом clickable «56 %» на тех же bounds.",
+        "discoveredAt": "2026-08-07T11:52:10.474Z"
+      },
+      {
+        "strategy": "relative-tap",
+        "of": "__window__",
+        "xRatio": 0.097,
+        "yRatio": 0.128,
+        "note": "Fallback avatar center [45,186][165,306]",
+        "discoveredAt": "2026-08-07T11:52:10.474Z"
+      }
+    ],
+    "ownProfileEditRoot": [
+      {
+        "strategy": "accessibility-id",
+        "value": "Мои фото",
+        "note": "Экран редактирования; dump 11-52-27",
+        "discoveredAt": "2026-08-07T11:52:27.284Z"
+      }
+    ],
+    "ownProfilePreviewButton": [
+      {
+        "strategy": "accessibility-id",
+        "value": "Просмотр",
+        "note": "Справа сверху на edit; dump 11-52-27 bounds [952,74][1056,107]",
+        "discoveredAt": "2026-08-07T11:52:27.284Z"
+      }
+    ]
+  }
+}
